@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Aruna Sri 🎀</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='3') }}">
+</head>
+<body>
+<audio id="birthdayMusic" loop preload="auto"><source src="{{ url_for('static', filename='music/inthandham.mpeg') }}" type="audio/mpeg"></audio>
+<button class="music-btn" onclick="toggleMusic()">🎵 Inthandham • Play / Pause</button>
+<section class="hero hero-special" aria-label="Birthday opening page" onclick="document.querySelector('.photo-section').scrollIntoView({behavior:'smooth'})">
+  <div class="hero-backdrop" aria-hidden="true"></div>
+  <div class="hero-flower flower-top-left" aria-hidden="true">🌸</div>
+  <div class="hero-flower flower-top-right" aria-hidden="true">🌷</div>
+  <div class="hero-flower flower-mid-left" aria-hidden="true">🌼</div>
+  <div class="hero-flower flower-mid-right" aria-hidden="true">🌺</div>
+  <div class="hero-flower flower-bottom-left" aria-hidden="true">🌷</div>
+  <div class="hero-flower flower-bottom-right" aria-hidden="true">🌸</div>
+  <div class="hero-petal petal-one" aria-hidden="true">✿</div>
+  <div class="hero-petal petal-two" aria-hidden="true">❀</div>
+  <div class="hero-petal petal-three" aria-hidden="true">✿</div>
+  <div class="hero-poster-wrap">
+    <div class="hero-frame-glow"></div>
+    <img class="hero-poster" src="{{ url_for('static', filename='photos/front-page.png') }}" alt="Happy Birthday birthday poster">
+  </div>
+</section>
+<section class="section photo-section"><h2>📸 Ten Special Moments</h2><p>Some memories deserve their own little place. 💗</p>
+<div class="slideshow scrapbook-frame">
+  <div class="frame-balloons left">🎈 🎈</div>
+  <div class="frame-balloons right">🎈 🎈</div>
+  <div class="frame-heart heart-a">♡</div>
+  <div class="frame-heart heart-b">♥</div>
+  <div class="frame-flower flower-a">🌸</div>
+  <div class="frame-flower flower-b">🌼</div>
+  <div class="frame-confetti confetti-1">✦</div>
+  <div class="frame-confetti confetti-2">•</div>
+  <div class="photo-paper">
+    <div class="photo-tape">🎀</div>
+    <div class="photo-window">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo1.jpg') }}" alt="Birthday memory photo 1">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo2.jpg') }}" alt="Birthday memory photo 2">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo3.jpg') }}" alt="Birthday memory photo 3">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo4.jpg') }}" alt="Birthday memory photo 4">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo5.jpg') }}" alt="Birthday memory photo 5">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo6.png') }}" alt="Birthday memory photo 6">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo7.png') }}" alt="Birthday memory photo 7">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo8.png') }}" alt="Birthday memory photo 8">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo9.png') }}" alt="Birthday memory photo 9">
+      <img class="slide" src="{{ url_for('static', filename='photos/photo10.png') }}" alt="Birthday memory photo 10">
+    </div>
+    <div class="photo-caption"><span id="photoCaption">A Special Memory ♡</span></div>
+  </div>
+</div>
+<div class="slide-dots" aria-label="Photo slideshow"><button class="dot active" aria-label="Show photo 1" onclick="goToSlide(0)"></button><button class="dot" aria-label="Show photo 2" onclick="goToSlide(1)"></button><button class="dot" aria-label="Show photo 3" onclick="goToSlide(2)"></button><button class="dot" aria-label="Show photo 4" onclick="goToSlide(3)"></button><button class="dot" aria-label="Show photo 5" onclick="goToSlide(4)"></button><button class="dot" aria-label="Show photo 6" onclick="goToSlide(5)"></button><button class="dot" aria-label="Show photo 7" onclick="goToSlide(6)"></button><button class="dot" aria-label="Show photo 8" onclick="goToSlide(7)"></button><button class="dot" aria-label="Show photo 9" onclick="goToSlide(8)"></button><button class="dot" aria-label="Show photo 10" onclick="goToSlide(9)"></button></div>
+</section>
+<section class="section"><div class="message-card"><h2>💌 A Birthday Message For You</h2><p>Dear <b>Aruna Sri / Police ji</b> 🥰,</p><p>Wishing you a very Happy Birthday! 🎂🎉 May your life be filled with happiness, love, success, and beautiful memories. May every day bring you a new reason to smile.</p><p>Thank you for being such a special person in my life. Keep smiling, keep laughing, and never stop chasing your dreams. May all your wishes come true! ✨</p><p>You deserve all the happiness in the world. Once again, Happy Birthday to my dear Police! 💕🎁</p><p>With lots of love and best wishes 💖</p></div></section>
+<section class="section memories-intro">
+  <div class="section-kicker">A LITTLE ALBUM OF HER MOODS ✨</div>
+  <h2>📖 Memories with Police</h2>
+  <p>Five expressions, five little stories — each one feels like a different chapter of the same beautiful friendship. 💗</p>
+  <div class="memory-mini-grid">
+    <div class="memory-mini"><img src="{{ url_for('static', filename='memories/best.jpg') }}" alt="Best memory"><span>🫶 Best Memory</span></div>
+    <div class="memory-mini"><img src="{{ url_for('static', filename='memories/cute.jpg') }}" alt="Cute memory"><span>🥺 Cute</span></div>
+    <div class="memory-mini"><img src="{{ url_for('static', filename='memories/happy.jpg') }}" alt="Happy memory"><span>🥰 Happy</span></div>
+    <div class="memory-mini"><img src="{{ url_for('static', filename='memories/attitude.jpg') }}" alt="Attitude memory"><span>😎 Attitude</span></div>
+    <div class="memory-mini"><img src="{{ url_for('static', filename='memories/angry.jpg') }}" alt="Angry memory"><span>😤 Angry</span></div>
+  </div>
+  <a class="link-button" href="{{ url_for('memories') }}">✨ Explore All Five Memories ✨</a>
+</section>
+<section class="section"><h2>🎬 A Special Wish For You</h2><p>A special birthday wish made especially for you. 💕</p><video controls class="birthday-video"><source src="{{ url_for('static', filename='video/special-wishes.mp4') }}" type="video/mp4">Your browser does not support video.</video></section>
+<section class="final-message"><div class="final-card"><h2>🎀 Happy Birthday Once Again, Aruna Sri! 🎀</h2><p>Dear <strong>Police ji</strong> 💗,</p><p>Some people come into our lives and simply become a part of our memories, but <strong>you are one of those special people who became an important part of my life.</strong> 🥰</p><p>You are truly <strong>one of my favorite people and one of the most important persons in my life.</strong> Your smile, your laughter, your craziness, and all the little moments we share make our friendship really special. ✨</p><p>I may not always say it, but I genuinely <strong>value you and our friendship a lot.</strong> 💕</p><p>I hope you always stay happy, keep smiling, and achieve everything you dream of.</p><p>May this new year of your life bring you <strong>lots of happiness, success, beautiful memories, and countless reasons to smile.</strong> 🎂🎉✨</p><p>No matter how many birthdays come and go, I hope we always have <strong>more memories, more laughs, more crazy moments, and more stories to remember.</strong> 😄💗</p><h3>🎁 Once again, Happy Birthday to one of my favorite and most important people — my Police ji! 👮‍♀️💖</h3><p><strong>Stay happy. Stay blessed. Keep smiling always!</strong> 🥰✨</p><p>💌 <em>This little surprise was made especially for you, because you are truly special to me.</em> 💗</p><p class="signature">— With lots of best wishes 💕</p></div></section>
+<footer><p>✨ Made especially for Aruna Sri ✨</p><p>💗 With lots of best wishes 💗</p></footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body></html>
